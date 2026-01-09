@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ammu-Nation | Los Santos Official Store</title>
+    <style>
+        :root {
+            --primary-color: #ff8c00; /* Arancione classico */
+            --bg-dark: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #e0e0e0;
+            --accent-red: #d32f2f;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://margin.de/wp-content/uploads/2021/05/gta-background.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 2px 2px 10px rgba(255, 140, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .category-title {
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            text-transform: uppercase;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: italic;
+            color: #555;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 0 0 10px 0;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #4caf50;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            background-color: var(--primary-color);
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        .buy-btn:hover {
+            background-color: #e67e00;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 50px;
+            font-size: 0.8rem;
+            color: #666;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>AMMU-NATION</h1>
+    <p>Difendi il tuo diritto di portare armi a Los Santos</p>
+</header>
+
+<div class="container">
+    
+    <h2 class="category-title">Armi Bianche (Corpo a Corpo)</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-img">[Immagine Mazza]</div>
+            <div class="card-content">
+                <h3 class="card-title">Mazza da Baseball</h3>
+                <span class="price">$150</span>
+                <p>Perfetta per risolvere dispute condominiali senza fare troppo rumore.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">[Immagine Katana]</div>
+            <div class="card-content">
+                <h3 class="card-title">Katana</h3>
+                <span class="price">$800</span>
+                <p>L'eleganza dell'acciaio giapponese nel palmo della tua mano.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">[Immagine Coltello]</div>
+            <div class="card-content">
+                <h3 class="card-title">Coltello a Serramanico</h3>
+                <span class="price">$50</span>
+                <p>Piccolo, rapido, indispensabile per i vicoli bui.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="category-title">Armi Classiche (Da Fuoco)</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-img">[Immagine Pistola]</div>
+            <div class="card-content">
+                <h3 class="card-title">Pistola 9mm</h3>
+                <span class="price">$450</span>
+                <p>L'arma che ha costruito questo paese. Precisa e letale.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">[Immagine SMG]</div>
+            <div class="card-content">
+                <h3 class="card-title">Micro SMG</h3>
+                <span class="price">$1,200</span>
+                <p>Il compagno perfetto per ogni Drive-by di successo.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">[Immagine Fucile]</div>
+            <div class="card-content">
+                <h3 class="card-title">Fucile d'Assalto</h3>
+                <span class="price">$2,500</span>
+                <p>Design russo, affidabilità universale. Il re delle strade.</p>
+                <button class="buy-btn">Acquista</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2024 Ammu-Nation Inc. - Nessun rimborso sui proiettili sparati.</p>
+    <p>📍 Location: Los Santos, San Andreas</p>
+</footer>
+
+</body>
+</html>
