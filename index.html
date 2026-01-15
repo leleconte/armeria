@@ -3,242 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMMU-NATION | Southern San Andreas</title>
+    <title>THE SHOOTING RANGE | Listino Integrale</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Staatliches&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@300;400;700&display=swap');
 
         :root {
-            --gold: #d4af37;
-            --blood: #8b0000;
-            --bg-black: #0a0a0a;
+            --gold: #c5a059;
+            --bg: #080808;
+            --card: #121212;
+            --red: #a82323;
         }
 
         body {
-            background-color: var(--bg-black);
-            color: white;
-            font-family: 'Oswald', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
             margin: 0;
-            overflow-x: hidden;
+            padding: 0;
+            line-height: 1.5;
         }
 
-        /* Effetto Cinematico di Sfondo */
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), 
-                        url('https://images.wallpapersden.com/image/download/gta-5-art-hd-cool-gaming_bWlpZ2mUmZqaraWkpJRmbmdlrWdtbGU.jpg');
+        /* HEADER */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(8,8,8,1)), 
+                        url('https://images.wallpapersden.com/image/download/gta-5-v-art_bWlpZ2mUmZqaraWkpJRma2VlrWdnZ2U.jpg');
             background-size: cover;
             background-position: center;
+            padding: 120px 20px 80px;
             text-align: center;
-            animation: fadeIn 2s ease-in;
-        }
-
-        .hero h1 {
-            font-family: 'Staatliches', cursive;
-            font-size: 8rem;
-            margin: 0;
-            letter-spacing: 10px;
-            color: white;
-            text-shadow: 0 0 20px rgba(255,255,255,0.2);
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 3rem;
-            margin: 80px 0 40px;
-            text-transform: uppercase;
-            letter-spacing: 5px;
             border-bottom: 2px solid var(--gold);
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Big Shoulders Display', sans-serif;
+            font-size: 6rem;
+            color: #fff;
+            margin: 0;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: var(--gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            font-weight: 700;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
 
-        /* Griglia Cinematografica */
+        /* TITOLI SEZIONE */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 60px 0 25px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-family: 'Big Shoulders Display', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            font-weight: 700;
+            background: var(--red);
+            color: white;
+        }
+
+        .tag.safe { background: #444; }
+
+        /* GRID ARMI */
         .weapon-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
-            margin-bottom: 100px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 15px;
         }
 
         .weapon-card {
-            position: relative;
-            height: 450px;
-            background: #111;
-            overflow: hidden;
+            background: var(--card);
             border: 1px solid #222;
-            transition: all 0.5s ease;
-            cursor: pointer;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
         }
 
         .weapon-card:hover {
             border-color: var(--gold);
             transform: scale(1.02);
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+            background: #1a1a1a;
         }
 
-        .weapon-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 40px 20px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            z-index: 2;
-        }
-
-        .weapon-name {
-            font-size: 2rem;
+        .w-name {
+            font-weight: 600;
             text-transform: uppercase;
-            margin: 0;
-            color: white;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
         }
 
-        .weapon-tag {
+        .w-price {
             color: var(--gold);
-            font-size: 0.9rem;
+            font-family: 'Big Shoulders Display', sans-serif;
+            font-size: 1.6rem;
+        }
+
+        /* ACCESSORI */
+        .acc-container {
+            background: #111;
+            padding: 40px;
+            margin: 40px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            border: 1px solid #222;
+        }
+
+        .acc-list { list-style: none; padding: 0; margin: 0; }
+        .acc-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .acc-list li b { color: var(--gold); }
+
+        footer {
+            text-align: center;
+            padding: 100px 20px;
+            color: #444;
             letter-spacing: 2px;
-        }
-
-        .weapon-desc {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 10px;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-
-        .weapon-card:hover .weapon-desc {
-            opacity: 1;
-        }
-
-        /* Badge "Classico" */
-        .badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: var(--blood);
-            padding: 5px 15px;
             font-size: 0.8rem;
-            font-weight: bold;
-            z-index: 3;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .scroll-down {
-            margin-top: 50px;
-            animation: bounce 2s infinite;
-            font-size: 2rem;
-            color: white;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-            40% {transform: translateY(-10px);}
-            60% {transform: translateY(-5px);}
         }
     </style>
 </head>
 <body>
 
-<section class="hero">
-    <p>Benvenuti a Los Santos</p>
-    <h1>AMMU-NATION</h1>
-    <p>L'Arsenale dei Sopravvissuti</p>
-    <div class="scroll-down">↓</div>
-</section>
+<header>
+    <p>Premium Arsenal</p>
+    <h1>THE SHOOTING RANGE</h1>
+</header>
 
 <div class="container">
-    
-    <div style="text-align: center;"><h2 class="section-title">Armi Bianche</h2></div>
+
+    <div class="section-header">
+        <h2>Armi Bianche</h2>
+        <span class="tag safe">Senza Porto D'Armi</span>
+    </div>
     <div class="weapon-grid">
-        <div class="weapon-card">
-            <div class="badge">HARDCORE</div>
-            <div class="weapon-overlay">
-                <p class="weapon-tag">CORPO A CORPO</p>
-                <h3 class="weapon-name">Mazza da Baseball</h3>
-                <p class="weapon-desc">Il ferro del mestiere per ogni rissa urbana che si rispetti. Bilanciata, iconica, definitiva.</p>
-            </div>
-        </div>
-        <div class="weapon-card">
-            <div class="weapon-overlay">
-                <p class="weapon-tag">CORPO A CORPO</p>
-                <h3 class="weapon-name">Mannaia</h3>
-                <p class="weapon-desc">Direttamente dal retro di un ristorante di Little Italy. Pesante e brutale.</p>
-            </div>
-        </div>
-        <div class="weapon-card">
-            <div class="badge">VINTAGE</div>
-            <div class="weapon-overlay">
-                <p class="weapon-tag">CORPO A CORPO</p>
-                <h3 class="weapon-name">Martello</h3>
-                <p class="weapon-desc">Per chi ama il fai-da-te... estremo. Un classico dimenticato dalle vecchie edizioni.</p>
-            </div>
-        </div>
-        <div class="weapon-card">
-            <div class="weapon-overlay">
-                <p class="weapon-tag">SPORT</p>
-                <h3 class="weapon-name">Mazza da Golf</h3>
-                <p class="weapon-desc">Perché a Los Santos, un "birdie" si ottiene in modi molto diversi.</p>
-            </div>
-        </div>
+        <div class="weapon-card"><span class="w-name">Tirapugni</span><span class="w-price">3.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Coltello</span><span class="w-price">3.400$</span></div>
+        <div class="weapon-card"><span class="w-name">Coltello a serramanico</span><span class="w-price">3.450$</span></div>
+        <div class="weapon-card"><span class="w-name">Pugnale antico</span><span class="w-price">4.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Machete</span><span class="w-price">3.050$</span></div>
+        <div class="weapon-card"><span class="w-name">Torcia</span><span class="w-price">2.400$</span></div>
+        <div class="weapon-card"><span class="w-name">Martello</span><span class="w-price">1.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Mazza da baseball</span><span class="w-price">2.600$</span></div>
+        <div class="weapon-card"><span class="w-name">Mazza da golf</span><span class="w-price">2.600$</span></div>
+        <div class="weapon-card"><span class="w-name">Stecca da biliardo</span><span class="w-price">3.350$</span></div>
     </div>
 
-    <div style="text-align: center;"><h2 class="section-title">Armi Classiche</h2></div>
+    <div class="section-header">
+        <h2>Semi Automatiche</h2>
+        <span class="tag">Porto d'armi richiesto</span>
+    </div>
     <div class="weapon-grid">
-        <div class="weapon-card">
-            <div class="badge">BEST SELLER</div>
-            <div class="weapon-overlay">
-                <p class="weapon-tag">PISTOLA</p>
-                <h3 class="weapon-name">9mm Beretta Style</h3>
-                <p class="weapon-desc">La compagna di ogni prima missione. Affidabile, rapida, letale.</p>
-            </div>
+        <div class="weapon-card"><span class="w-name">Pistoletta</span><span class="w-price">15.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Pistola</span><span class="w-price">25.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Pistola Vintage</span><span class="w-price">21.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Pistola Da Combattimento</span><span class="w-price">25.500$</span></div>
+        <div class="weapon-card"><span class="w-name">Pistola Pesante</span><span class="w-price">27.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Pistola Calibro 50</span><span class="w-price">40.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Revolver Pesante</span><span class="w-price">50.000$</span></div>
+    </div>
+
+    <div class="section-header">
+        <h2>Mitra & Automatiche</h2>
+        <span class="tag">Licenza Speciale</span>
+    </div>
+    <div class="weapon-grid">
+        <div class="weapon-card"><span class="w-name">Pistola Automatica</span><span class="w-price">55.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Uzi</span><span class="w-price">60.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Mitra</span><span class="w-price">65.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Mitra D'Assalto</span><span class="w-price">70.000$</span></div>
+        <div class="weapon-card"><span class="w-name">PDW</span><span class="w-price">75.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Mitragliatrice Gusenberg</span><span class="w-price">88.000$</span></div>
+    </div>
+
+    <div class="section-header">
+        <h2>Fucili D'Assalto & Precisione</h2>
+        <span class="tag">Licenza Speciale</span>
+    </div>
+    <div class="weapon-grid">
+        <div class="weapon-card"><span class="w-name">Fucile D'Assalto (AK-47)</span><span class="w-price">80.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Carabina</span><span class="w-price">95.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Carabina Speciale</span><span class="w-price">100.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Fucile a Canne Mozze</span><span class="w-price">110.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Fucile a Pompa</span><span class="w-price">120.000$</span></div>
+        <div class="weapon-card" style="border-left: 4px solid var(--gold);"><span class="w-name">Fucile Da Cecchino</span><span class="w-price">175.000$</span></div>
+    </div>
+
+    <div class="section-header">
+        <h2>Accessori & Legale</h2>
+        <span class="tag safe">Personalizzazione</span>
+    </div>
+    <div class="acc-container">
+        <div>
+            <ul class="acc-list">
+                <li><span>Torcia</span> <b>2.000$</b></li>
+                <li><span>Caricatore steso</span> <b>4.000$</b></li>
+                <li><span>Mirino</span> <b>2.500$</b></li>
+                <li><span>Silenziatore</span> <b>5.000$</b></li>
+            </ul>
         </div>
-        <div class="weapon-card">
-            <div class="badge">LEGENDARY</div>
-            <div class="weapon-overlay">
-                <p class="weapon-tag">MITRAGLIATRICE</p>
-                <h3 class="weapon-name">Gusenberg Sweeper</h3>
-                <p class="weapon-desc">Stile proibizionismo. Il ruggito degli anni '20 per le strade di oggi.</p>
-            </div>
-        </div>
-        <div class="weapon-card">
-            <div class="weapon-overlay">
-                <p class="weapon-tag">FUCILE D'ASSALTO</p>
-                <h3 class="weapon-name">Fucile d'Assalto</h3>
-                <h3 class="weapon-name" style="font-size: 1rem; color: var(--gold);">K-47 MODEL</h3>
-                <p class="weapon-desc">Nessuna manutenzione, solo pura potenza di fuoco. Lo standard globale della criminalità.</p>
-            </div>
+        <div>
+            <ul class="acc-list">
+                <li><span>Compensatore</span> <b>10.000$</b></li>
+                <li><span>Impugnatura</span> <b>6.000$</b></li>
+                <li><span>Freno di bocca</span> <b>6.500$</b></li>
+                <li><span>Certificato Balistico</span> <b>5.000$</b></li>
+            </ul>
         </div>
     </div>
 
 </div>
 
-<footer style="padding: 100px 0; text-align: center; color: #444; border-top: 1px solid #222;">
-    <p>AMMU-NATION LOS SANTOS - TUTTI I DIRITTI RISERVATI</p>
-    <p style="font-size: 0.7rem; letter-spacing: 2px;">VIVI VELOCE, MUORI CON STILE.</p>
+<footer>
+    THE SHOOTING RANGE — LOS SANTOS — OFFICIAL DATABASE 2026
 </footer>
 
 </body>
