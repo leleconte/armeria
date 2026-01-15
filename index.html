@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
         /* HEADER OTTIMIZZATO */
         header {
             background: linear-gradient(rgba(0,0,0,0.8), rgba(10,10,10,1)), 
-                        url('https://images.alphacoders.com/691/691136.jpg'); /* Nuovo sfondo tattico */
+                        url('https://images.alphacoders.com/691/691136.jpg');
             background-size: cover;
             background-position: center;
             padding: 80px 20px 60px;
@@ -37,7 +37,7 @@
 
         header h1 {
             font-family: 'Big Shoulders Display', sans-serif;
-            font-size: clamp(3rem, 10vw, 5.5rem); /* Dimensione fluida per iPhone */
+            font-size: clamp(3rem, 10vw, 5.5rem);
             color: #fff;
             margin: 0;
             letter-spacing: 4px;
@@ -63,7 +63,7 @@
         /* SEZIONI MOBILE-FRIENDLY */
         .section-header {
             display: flex;
-            flex-direction: column; /* Colonna su mobile */
+            flex-direction: column;
             align-items: flex-start;
             margin: 40px 0 20px;
             border-left: 3px solid var(--gold);
@@ -101,7 +101,7 @@
         /* GRID ADATTIVA */
         .weapon-grid {
             display: grid;
-            grid-template-columns: 1fr; /* Una colonna su iPhone */
+            grid-template-columns: 1fr;
             gap: 10px;
         }
 
@@ -116,6 +116,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: 0.3s ease;
+        }
+
+        .weapon-card:hover {
+            border-color: var(--gold);
         }
 
         .w-name {
@@ -124,22 +129,24 @@
             font-size: 0.85rem;
             letter-spacing: 0.5px;
             color: #fff;
+            padding-right: 10px;
         }
 
         .w-price {
             color: var(--gold);
             font-family: 'Big Shoulders Display', sans-serif;
             font-size: 1.4rem;
+            white-space: nowrap;
         }
 
-        /* ACCESSORI OTTIMIZZATI PER TOUCH */
+        /* ACCESSORI */
         .acc-container {
             background: #111;
             padding: 20px;
             margin: 30px 0;
             display: grid;
-            grid-template-columns: 1fr; /* Colonna singola su mobile */
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 10px;
             border: 1px solid #222;
         }
 
@@ -218,7 +225,7 @@
         <div class="weapon-card"><span class="w-name">Mitra</span><span class="w-price">65.000$</span></div>
         <div class="weapon-card"><span class="w-name">Mitra D'Assalto</span><span class="w-price">70.000$</span></div>
         <div class="weapon-card"><span class="w-name">PDW</span><span class="w-price">75.000$</span></div>
-        <div class="weapon-card"><span class="w-name">Gusenberg</span><span class="w-price">88.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Mitragliatrice Gusenberg</span><span class="w-price">88.000$</span></div>
     </div>
 
     <div class="section-header">
@@ -226,16 +233,17 @@
         <span class="tag">Licenza Speciale</span>
     </div>
     <div class="weapon-grid">
-        <div class="weapon-card"><span class="w-name">Fucile D'Assalto</span><span class="w-price">80.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Fucile D'Assalto (AK-47)</span><span class="w-price">80.000$</span></div>
         <div class="weapon-card"><span class="w-name">Carabina</span><span class="w-price">95.000$</span></div>
         <div class="weapon-card"><span class="w-name">Carabina Speciale</span><span class="w-price">100.000$</span></div>
-        <div class="weapon-card"><span class="w-name">Canne Mozze</span><span class="w-price">110.000$</span></div>
+        <div class="weapon-card"><span class="w-name">Fucile a Canne Mozze</span><span class="w-price">110.000$</span></div>
         <div class="weapon-card"><span class="w-name">Fucile a Pompa</span><span class="w-price">120.000$</span></div>
-        <div class="weapon-card"><span class="w-name">Fucile Da Cecchino</span><span class="w-price">175.000$</span></div>
+        <div class="weapon-card" style="border-left: 3px solid var(--gold);"><span class="w-name">Fucile Da Cecchino</span><span class="w-price">175.000$</span></div>
     </div>
 
     <div class="section-header">
         <h2>Accessori & Legale</h2>
+        <span class="tag safe">Modifiche</span>
     </div>
     <div class="acc-container">
         <div>
